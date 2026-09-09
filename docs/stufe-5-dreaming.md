@@ -1,9 +1,9 @@
 # Stufe 5 — Dreaming
 
-> **Nicht in diesem Repo enthalten.** Unser Refinement-Lauf ist ein orchestrierter
-> Workflow, der an unser eigenes Repo gebunden ist. Was du hier bekommst, ist der
-> Bauplan plus die Freigabefragen — und für die ersten vier Aufgaben unten reicht
-> [`vault/check.py`](../vault/check.py) zusammen mit einer halben Stunde im Kalender.
+> **Ausführbar hier:** `/dream` aus [`plugins/brain-kit/`](../plugins/brain-kit/).
+> Der Befehl macht der Reihe nach, was bei uns mehrere Agenten parallel tun — die
+> Orchestrierung fehlt, das Verfahren nicht. Er schreibt ausschließlich Vorschläge nach
+> `$BRAIN_ROOT/.dream/<datum>/` und fasst den Graphen nicht an.
 
 Der Compile aus [Stufe 4](stufe-4-plugin.md) verarbeitet **neues** Rohmaterial zu Nodes. Dreaming
 arbeitet auf dem **bestehenden** Graphen: Es liest zurück, was schon da ist, und

@@ -1,6 +1,6 @@
 # brain-kit
 
-Vier Befehle für ein Gedächtnis aus Markdown-Nodes.
+Fünf Befehle für ein Gedächtnis aus Markdown-Nodes.
 
 ```
 /plugin marketplace add neurawork-git/brain-starterkit
@@ -32,6 +32,7 @@ Der Vault muss der Konvention folgen — Skelett und Prüfskript liegen im
 | `/diary` | Ertrag der laufenden Sitzung ins Tageslog sichern |
 | `/consolidate` | Unverarbeitete Tageslogs zu typisierten Nodes destillieren, Index nachziehen |
 | `/daily-summary` | Tagesbericht aus Tageslog, Commits, Compile-Stand und offenen Entscheidungen |
+| `/dream` | Refinement über die bestehenden Nodes: Widersprüche, Dubletten, fehlende Kanten, Veraltetes — als Vorschlag, ohne den Graphen anzufassen |
 
 ## Was sie nicht tun
 

@@ -31,6 +31,12 @@ Verwandt: [[docker-volume-gibt-platz-nicht-zurueck]] · [[betrieb-checkliste]]
 Fünf Pflichtfelder, mehr nicht: `name` (kebab-case, gleich dem Dateinamen),
 `description` (**ein** Satz — danach wird gesucht), `type`, `tags`, `date`.
 
+**Slugs bleiben ASCII**, auch in deutschen Texten: `nur-ueber-dateisystem` statt
+`nur-über-dateisystem`. Dateinamen mit Umlauten überstehen den Weg über verschiedene
+Betriebssysteme, Git-Konfigurationen und Werkzeuge nicht zuverlässig. Im **Fließtext**
+eines Nodes schreibst du dagegen normal, mit Umlauten — dort ist ASCII-Ersatz schlicht
+falsch geschrieben.
+
 ## Die sechs Typen
 
 | Typ | Was hinein gehört | Woran du ihn erkennst |

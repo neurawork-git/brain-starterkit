@@ -1,7 +1,7 @@
 {
   "name": "brain-kit",
-  "version": "0.1.0",
-  "description": "Vier Befehle fuer ein Gedaechtnis aus Markdown-Nodes: Kontext laden, Sitzungsertrag sichern, zu typisierten Nodes destillieren, Tag berichten. Erwartet BRAIN_ROOT als absoluten Pfad; ohne die Variable brechen die Befehle mit einer Meldung ab statt zu raten.",
+  "version": "0.2.0",
+  "description": "Fünf Befehle für ein Gedächtnis aus Markdown-Nodes: Kontext laden, Sitzungsertrag sichern, zu typisierten Nodes destillieren, Tag berichten, den Bestand nachbereiten. Erwartet BRAIN_ROOT als absoluten Pfad; ohne die Variable brechen die Befehle mit einer Meldung ab statt zu raten.",
   "author": {
     "name": "Neurawork",
     "url": "https://github.com/neurawork-git"

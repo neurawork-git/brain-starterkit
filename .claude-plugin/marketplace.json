@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "brain-starterkit",
-  "description": "Wissensgraph als Gedaechtnis fuer KI-Assistenten — Konvention, Vault, Befehle. Das Verfahren, das wir selbst benutzen, in Stufen zum Nachbauen.",
+  "description": "Wissensgraph als Gedächtnis für KI-Assistenten — Konvention, Vault, Befehle. Das Verfahren, das wir selbst benutzen, in Stufen zum Nachbauen.",
   "owner": {
     "name": "Neurawork",
     "url": "https://github.com/neurawork-git"
@@ -10,7 +10,7 @@
     {
       "name": "brain-kit",
       "source": "./plugins/brain-kit",
-      "description": "Vier Befehle fuer ein Markdown-Gedaechtnis: /primer laedt den Kontext, /diary sichert den Ertrag einer Sitzung, /consolidate destilliert daraus typisierte Nodes, /daily-summary berichtet den Tag.",
+      "description": "Fünf Befehle für ein Markdown-Gedächtnis: /primer lädt den Kontext, /diary sichert den Ertrag einer Sitzung, /consolidate destilliert daraus typisierte Nodes, /daily-summary berichtet den Tag, /dream bereitet den Bestand nach.",
       "category": "productivity"
     }
   ]

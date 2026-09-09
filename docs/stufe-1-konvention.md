@@ -63,7 +63,7 @@ Eine Datei `MEMORY.md` an der Wurzel, nur Zeiger, nie Inhalt:
 
 ```markdown
 ## Immer gültig
-- Bei „Platte voll" erst `df` im Container [→](claims/postgres-diskvoll-....md)
+- Bei „Platte voll" erst `df` im Container → `claims/postgres-diskvoll-....md`
 
 ## Kunden
 - [[kunde-nord]] · [[anbieter-hosting]]

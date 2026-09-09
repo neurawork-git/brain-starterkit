@@ -11,8 +11,12 @@ GEHEIM="BEGIN [A-Z ]*PRIVATE KEY|xox[baprs]-|sk-[A-Za-z0-9]{20,}|ghp_[A-Za-z0-9]
 treffer=0
 while IFS= read -r datei; do
   [ "$datei" = "scripts/scrub-check.sh" ] && continue
-  if grep -niE "$BEGRIFFE" "$datei" | sed "s|^|KUNDE  $datei:|"; then treffer=1; fi
-  if grep -niE "$GEHEIM" "$datei" | cut -c1-60 | sed "s|^|SECRET $datei:|"; then treffer=1; fi
+  # Ausgabe erst einfangen, dann pruefen: der Exit-Code einer Pipe waere der
+  # des LETZTEN Befehls (sed/cut) und damit immer 0.
+  fund=$(grep -niE "$BEGRIFFE" "$datei" 2>/dev/null || true)
+  if [ -n "$fund" ]; then printf 'KUNDE  %s\n' "$datei"; printf '%s\n' "$fund" | cut -c1-100; treffer=1; fi
+  fund=$(grep -niE "$GEHEIM" "$datei" 2>/dev/null || true)
+  if [ -n "$fund" ]; then printf 'SECRET %s (Zeilen unterdrueckt)\n' "$datei"; treffer=1; fi
 done < <(git ls-files)
 
 if [ "$treffer" -eq 0 ]; then

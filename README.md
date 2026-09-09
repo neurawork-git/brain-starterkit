@@ -84,6 +84,10 @@ ist auch ohne Hooks alles erreichbar, nur eben nicht von selbst.
 - `beispiele/` — der wörtliche Compiler-Prompt und echte Nutzer-Prompts mit dem Node,
   den sie treffen sollten
 
+## Lizenz
+
+Apache License 2.0, siehe [LICENSE](LICENSE).
+
 ## Herkunft
 
 Entstanden bei [Neurawork](https://neurawork.ai) im täglichen Betrieb. Die Zahlen in

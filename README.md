@@ -83,6 +83,9 @@ ist auch ohne Hooks alles erreichbar, nur eben nicht von selbst.
 - `plugins/brain-kit/` — das Plugin mit den vier Befehlen
 - `beispiele/` — der wörtliche Compiler-Prompt und echte Nutzer-Prompts mit dem Node,
   den sie treffen sollten
+- `scripts/scrub-check.sh` — prüft vor einem Push, dass keine eigenen Namen oder
+  Zugangsdaten im Baum stehen. Die Begriffe kommen aus `.scrub-terms` (nicht
+  eingecheckt) oder als Argumente, damit die Liste selbst nichts verrät.
 
 ## Lizenz
 

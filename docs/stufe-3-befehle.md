@@ -16,7 +16,8 @@ Sitzung neu starten, sonst tauchen die Befehle nicht auf. Die Befehlsliste wird 
 Start eingelesen.
 
 Ohne Plugin geht es auch: Die vier Dateien aus `plugins/brain-kit/commands/` nach
-`~/.claude/commands/` kopieren, ebenfalls Sitzung neu starten.
+`~/.claude/commands/` kopieren, ebenfalls Sitzung neu starten. Es sind gewöhnliche
+Command-Dateien, das Plugin ist nur die bequemere Auslieferung.
 
 Alle vier brauchen `BRAIN_ROOT` als absoluten Pfad. Fehlt die Variable, brechen sie
 mit einer Meldung ab, statt einen Pfad zu raten.

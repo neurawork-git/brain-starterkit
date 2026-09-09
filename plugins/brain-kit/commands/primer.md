@@ -10,11 +10,16 @@ Lade den vollständigen Arbeitskontext für diese Session.
 
 ## STEP 1: Brain laden (kg-Graph)
 
-`brain/MEMORY.md` (autoMemoryDirectory) ist der Lean-Index in den **kg-Graphen** (`brain/` = typisierte
-Nodes claim/source/entity/decision). Orientiere dich über Identity, Preferences, laufende Systeme + Hot Rules.
-Für gezielten Recall NICHT blind Dateien lesen, sondern: Index → `brain_search`/`brain_get`
-(brain-mcp) oder `scripts/recall.py` → `[[Wikilinks]]` folgen → `brain_neighbors` bzw.
-`kg neighbors/trace <slug>` (Repo `knowledge-graph`). `pickbrain` ist derzeit offline.
+`$BRAIN_ROOT/MEMORY.md` ist der Lean-Index in den Graphen (typisierte Nodes claim/feedback/
+reference/entity/project/source). Orientiere dich über Identität, Präferenzen, laufende Systeme
+und die immer geltenden Regeln.
+
+Für gezielten Recall NICHT blind Dateien lesen, sondern: Index → Suche über die
+`description`-Zeilen → `[[Wikilinks]]` des Treffers folgen. Ein bis zwei Hops reichen fast immer.
+
+Sind Traversal-Werkzeuge eingerichtet (`brain_search`/`brain_get`/`brain_neighbors` als MCP-Tools,
+ein eigenes Recall-Skript, ein Graph-CLI), nutze sie statt der Handsuche. Fehlen sie, ist das kein
+Fehler — die Handsuche über `grep` liefert dasselbe, nur langsamer.
 
 ## STEP 2: Offene Entscheidungen prüfen (Human-Gate)
 

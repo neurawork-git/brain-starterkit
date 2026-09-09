@@ -11,7 +11,11 @@ import sys
 from pathlib import Path
 
 PFLICHT = ("name", "description", "type", "tags", "date")
-FM = re.compile(r"\A---\r?\n(.*?)\r?\n---", re.S)
+# Das unsichtbare Zeichen vor "?---" ist ein BOM: Dateien aus manchen
+# Windows-Editoren beginnen damit, und ohne die Toleranz gilt so eine
+# Datei faelschlich als "kein Frontmatter" — genau der stille Ausfall,
+# den dieses Skript finden soll.
+FM = re.compile(r"\A﻿?---\r?\n(.*?)\r?\n---", re.S)
 LINK = re.compile(r"\[\[([^\]|#]+)")
 
 
@@ -50,7 +54,9 @@ def pruefe(wurzel: Path) -> list[str]:
         for feld in PFLICHT:
             if feld not in felder:
                 befunde.append(f"{rel}: Feld '{feld}' fehlt")
-        if felder.get("name") and felder["name"] != p.stem:
+        # Beide Schreibweisen gelten: "mein-node" und "claims/mein-node".
+        # Die zweite ist die kg-Form aus beispiele/compiler-prompt.md.
+        if felder.get("name") and felder["name"].split("/")[-1] != p.stem:
             befunde.append(f"{rel}: name '{felder['name']}' weicht vom Dateinamen ab")
         ausgehend[p.stem] = ziele
         eingehend |= ziele
@@ -71,6 +77,11 @@ def selftest() -> None:
         gut = "---\nname: a\ndescription: x\ntype: claim\ntags: [t]\ndate: 2026-01-01\n---\nVerwandt: [[b]]\n"
         (w / "a.md").write_text(gut, encoding="utf-8")
         (w / "b.md").write_text(gut.replace("name: a", "name: b").replace("[[b]]", "[[a]]"), encoding="utf-8")
+        assert pruefe(w) == [], pruefe(w)
+
+        # kg-Form mit Typ-Praefix und eine Datei mit BOM gelten als gueltig
+        (w / "f.md").write_text(gut.replace("name: a", "name: claims/f").replace("[[b]]", "[[a]]"), encoding="utf-8")
+        (w / "g.md").write_text("﻿" + gut.replace("name: a", "name: g").replace("[[b]]", "[[a]]"), encoding="utf-8")
         assert pruefe(w) == [], pruefe(w)
 
         (w / "c.md").write_text("kein kopf\n", encoding="utf-8")

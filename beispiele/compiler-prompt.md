@@ -5,10 +5,16 @@ Wörtliche Kopie der Spezifikation, die im Betrieb den Destillierlauf steuert
 der Lauf dem Modell übergibt. Neutralisiert ist nur eine Stelle: die Kundennamen
 in einem Tag-Beispiel.
 
-Verweise auf eigene Repos und Skripte (`knowledge-graph`, `inject_bench.py`,
-`inject_judge.py`) stehen absichtlich noch drin. Sie existieren bei dir nicht und
-sind an diesen Stellen zu streichen — sie zeigen aber, wo in so einer
-Spezifikation die Messung ansetzt, und das ist der lehrreiche Teil.
+Verweise auf eigene Repos und Skripte stehen absichtlich noch drin: `knowledge-graph`
+als Ort des Schemas, `inject_bench.py` und `inject_judge.py` als Messwerkzeuge, dazu
+Pfade unseres Arbeitsrepos. Sie existieren bei dir nicht und sind zu streichen. Sie
+zeigen aber, an welchen Stellen so eine Spezifikation ihre Messung verankert, und das
+ist der lehrreiche Teil.
+
+**Beachte den Widerspruch zur Vorlage im Vault:** Hier heißt ein Node
+`claims/mein-slug`, mit Typ-Präfix. Die Vorlage in `vault/templates/node.md` nutzt die
+einfache Form `mein-slug`. Beide sind gültig, `vault/check.py` akzeptiert sie beide —
+aber entscheide dich für eine, sonst zeigen deine Wikilinks mal so und mal so.
 
 Sie ist auf Englisch, weil sie das immer war. Das ist keine Empfehlung, nur eine
 Tatsache über diese Datei.
